@@ -1,0 +1,19 @@
+{
+  "name": "youtubeclone",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/flsnrtmmyungju/youtubeclone.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/flsnrtmmyungju/youtubeclone/issues"
+  },
+  "homepage": "https://github.com/flsnrtmmyungju/youtubeclone#readme",
+  "dependencies": {
+    "express": "^4.17.0"
+  }
+}
