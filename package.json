@@ -15,5 +15,8 @@
   "homepage": "https://github.com/flsnrtmmyungju/youtubeclone#readme",
   "dependencies": {
     "express": "^4.17.0"
+  },
+  "scripts": {
+    "start": "node index.js"
   }
 }
