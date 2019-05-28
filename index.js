@@ -1,4 +1,7 @@
 import express from "express";
+import morgan from "morgan";
+import helmet from "helmet";
+
 const app = express();
 
 const PORT = 4500;
@@ -10,15 +13,11 @@ const handleHome = (req, res) => res.send("hello from home");
 
 const handleProfile = (req, res) => res.send("you are on my profile");
 
-const betweenHome = (req, res, next) => {
-  console.log("bettween");
-  next();
-};
+app.use(helmet());
+app.use(morgan("dev"));
 
 //route
 app.get("/", handleHome);
-
-app.use(betweenHome);
 
 app.get("/profile", handleProfile);
 
