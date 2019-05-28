@@ -1,14 +1,20 @@
 # youtubeclone
 
 <hr/>
-
-- 라이브러리,프레임워크 설명
+<h1>그냥 알아야할것 정리</h1>
 
 - 설치할때 끝에 -D 하면 dev개발용으로 개인이 필요한 프로젝트로 표시됨.<br>
   프로젝트에필요한게아님(ex/nodemon).
 
+- MVC 설명<br>
+  구조 같은것.
+
+  - M : 데이터
+  - V : 데이터가 어떻게 생겼는지
+  - C : 데이터를 찾는 함수
+
 <hr/>
-<h1>설명 기본틀</h1>
+<h1>설명 기본틀- 라이브러리,프레임워크 설명</h1>
 
 <h2></h2>
 
@@ -84,9 +90,11 @@
 - <h4>사용법</h4>
 
 <pre><code>
- export를 default 로하면 그냥 import a from "./a";
+ export를 default 로하면 그 파일을 export한다는것 ex/ export default a;
+ 부를땐 ex/ import a from "./a";
   
- 아닐경우 import {a} from "./a";
+ 아닐경우 그변수만 export한다는것 ex/ export const a = express.Router(); 
+ 부를땐 import {a} from "./a";
 
 기본샘플
 

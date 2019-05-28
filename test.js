@@ -23,7 +23,11 @@ app.use(morgan("dev"));
 
 //route
 app.get("/", handleHome);
-
+//route 방법1
 app.get("/profile", handleProfile);
+//route 방법2 쪼개서사용
+//누군가 /user 경로에 접속하면 router.js의 라우터전체를 이용하겠다.
+app.use("/user", userRouter);
 
-//app.listen(PORT, handleListening);
+//누군가 import할때 app.js의 object(app.use..등등)를 주겠다.
+export default app;
