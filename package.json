@@ -14,9 +14,10 @@
   },
   "homepage": "https://github.com/flsnrtmmyungju/youtubeclone#readme",
   "dependencies": {
-    "express": "^4.17.0"
+    "express": "^4.17.0",
+    "nodemon": "^1.19.1"
   },
   "scripts": {
-    "start": "node index.js"
+    "start": "nodemon --exec node index.js"
   }
 }
