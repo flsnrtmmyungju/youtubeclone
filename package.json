@@ -14,10 +14,16 @@
   },
   "homepage": "https://github.com/flsnrtmmyungju/youtubeclone#readme",
   "dependencies": {
-    "express": "^4.17.0",
-    "nodemon": "^1.19.1"
+    "@babel/core": "^7.4.5",
+    "@babel/node": "^7.4.5",
+    "@babel/preset-env": "^7.4.5",
+    "core-js": "^3.1.3",
+    "express": "^4.17.0"
   },
   "scripts": {
-    "start": "nodemon --exec node index.js"
+    "start": "nodemon --exec babel-node index.js"
+  },
+  "devDependencies": {
+    "nodemon": "^1.19.1"
   }
 }
