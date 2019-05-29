@@ -187,7 +187,7 @@ arrow function ex/
 
 - <h4>설명</h4>
 
-  express에서 View를 다루는 방식중 하나.<br>
+  pug은 템플릿 언어. express의 view engine.<br>
   express로 HTML을 보여줄수있음.<br>
   res.send대신 실제 HTML전달.
 
@@ -200,8 +200,14 @@ arrow function ex/
 - <h4>사용법</h4>
 
 <pre><code>       
-** 파일명 **
-  
+** app.js **
+ app.set("view engine", "pug");
+
+** /views/home.pug ** (만들어야함 default주소.)
+
+** Controller 파일의 home부분.
+ export const home = (req, res) => res.render("home");
+ 
  
 </code></pre>
 

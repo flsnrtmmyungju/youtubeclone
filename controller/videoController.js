@@ -1,6 +1,7 @@
 //videoController.js
 
-export const home = (req, res) => res.send("Home");
+//                                   home는 pug템플릿에서 사용하기위해..
+export const home = (req, res) => res.render("home");
 export const search = (req, res) => res.send("Search");
 export const videos = (req, res) => res.send("Videos");
 export const upload = (req, res) => res.send("Upload");
