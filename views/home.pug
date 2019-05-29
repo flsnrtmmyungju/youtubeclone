@@ -1,1 +1,6 @@
-p hello
+//- 이레이아웃을 템플릿에서확장하겠다. layouts/main의 코드들도 사용하고 추가적인것을 더쓰겠다.
+extends layouts/main
+
+//- block content아래에 적으면 layouts/main의 main에 내용들어감.
+block content
+    p Hello

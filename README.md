@@ -201,14 +201,33 @@ arrow function ex/
 
 <pre><code>       
 ** app.js **
+
  app.set("view engine", "pug");
 
-** /views/home.pug ** (만들어야함 default주소.)
+** /views/layouts/main.pug **
+
+doctype html
+ html
+     head
+         title a
+     body
+         header
+             h1 a
+         main
+             block content
+         footer
+             span &copy; a
+
+** /views/home.pug **
+
+ extends layouts/main
+
+ block content
+    p Hello
 
 ** Controller 파일의 home부분.
- export const home = (req, res) => res.render("home");
- 
- 
+
+ export const home = (req, res) => res.render("home"); 
 </code></pre>
 
 <hr/>
