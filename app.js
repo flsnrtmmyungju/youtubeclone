@@ -5,21 +5,24 @@ import morgan from "morgan";
 import helmet from "helmet";
 import cookieParser from "cookie-parser";
 import bodyParser from "body-parser";
+
+//import는 알파벳순으로하는게 좋다..
+import { localsMiddleware } from "./middleware";
+import routes from "./routes";
 import userRouter from "./routers/userRouter";
 import videoRouter from "./routers/videoRouter";
 import globalRouter from "./routers/globalRouter";
-import routes from "./routes";
 
 const app = express();
 
-app.set("view engine", "pug");
-
-//middleware
-app.use(cookieParser());
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: true }));
-app.use(helmet());
-app.use(morgan("dev"));
+//middleware 순서대로 작동
+app.use(helmet()); //보안
+app.set("view engine", "pug"); //view engine
+app.use(cookieParser()); //쿠키사용할수있게
+app.use(bodyParser.json()); //json 보게
+app.use(bodyParser.urlencoded({ extended: true })); //url보게.
+app.use(morgan("dev")); //지금 내가뭐하고있는지 보게
+app.use(localsMiddleware);
 
 //router
 app.use(routes.home, globalRouter);

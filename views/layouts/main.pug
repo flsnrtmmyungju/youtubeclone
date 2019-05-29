@@ -1,11 +1,13 @@
 doctype html
 html
     head
-        title youtubeclone
+        link(rel="stylesheet", href="https://use.fontawesome.com/releases/v5.8.2/css/all.css", integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay", crossorigin="anonymous")
+                                   //-middleware.js에서 설정해서 이쪽으로 보냄.
+        title | #{siteName}
     body
-        header
-            h1 youtubeclone
-        main
+        include ../partials/hearder
+                                  //- block: 아이디로 다른파일에서 이부분바꿀수있게.
+        main                        
             block content
-        footer
-            span &copy; youtubeclone 
+                                  //-include: 외부의 것을 불러오는방법. 
+        include ../partials/footer

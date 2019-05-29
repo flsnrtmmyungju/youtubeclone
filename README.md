@@ -204,26 +204,54 @@ arrow function ex/
 
  app.set("view engine", "pug");
 
+//미들웨어
+import { localsMiddleware } from "./middleware";
+
+app.use(localsMiddleware);
+
+** middleware.js **
+
+export const localsMiddleware = (req, res, next) => {
+  //res.locals  : express기본 미들웨어 , 정보를 내보내는데에 유용
+  res.locals.siteName = "youtubecline";
+};
+
 ** /views/layouts/main.pug **
 
 doctype html
  html
      head
-         title a
+                                        //-middleware.js에서 설정해서 이쪽으로 보냄.
+         title #{siteName}
      body
          header
              h1 a
          main
-             block content
-         footer
-             span &copy; a
+             block content              //block: 아이디로 다른파일에서 이부분바꿀수있게.
+         include ../partials/footer     //include: 외부의 것을 불러오는방법. 
 
 ** /views/home.pug **
 
+ //- 이레이아웃을 템플릿에서확장하겠다. layouts/main의 코드들도 사용하고 추가적인것을 더쓰겠다.
  extends layouts/main
 
+ //- block content아래에 적으면 layouts/main의 main에 내용들어감.
  block content
-    p Hello
+    p Home
+
+** /partials/header **
+ header.header
+     //- div.~~~일때는 div안적고 걍 아이디만적어도댐.
+     .header__column  
+         i.fab.fa-youtube
+
+** /partials/footer **
+
+ footer.footer
+     div.footer__icon
+         i.fab.fa-youtube
+     span.footer__text #{siteName} #{new Date().getFullYear()} &copy; // #{} 로 자바스크립트 코드집어넣을수있음.
+
 
 ** Controller 파일의 home부분.
 
@@ -395,4 +423,26 @@ doctype html
   
     app.use(cookieParser());
 </code></pre>
+<hr/>
+
+<h2>localsMiddleware</h2>
+
+- <h4>설명</h4>
+
+      npm이아닌 직접코딩한 미들웨어
+
+* <h4>설치</h4>
+
+<pre><code>
+ 
+</code></pre>
+
+- <h4>사용법</h4>
+
+<pre><code>       
+** 파일명 **
+  
+ 
+</code></pre>
+
 <hr/>
