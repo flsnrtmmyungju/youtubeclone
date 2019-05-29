@@ -6,13 +6,32 @@
 - 설치할때 끝에 -D 하면 dev개발용으로 개인이 필요한 프로젝트로 표시됨.<br>
   프로젝트에필요한게아님(ex/nodemon).
 
-- MVC 설명<br>
-  구조 같은것.
+<h2>MVC 설명</h2>
 
-  - M : 데이터
-  - V : 데이터가 어떻게 생겼는지
-  - C : 데이터를 찾는 함수
+패턴,구조 같은것.
 
+- M : 데이터
+- V : 데이터가 어떻게 생겼는지
+- C : 데이터를 찾는 함수
+
+<h2>arrow function</h2>
+
+<pre><code>
+nomal function ex/
+
+ function a () {
+   return a;
+ };
+
+arrow function ex/
+ ex1//
+ const a () => a;  //암시적 성격을가져 return 안써도 a가 리턴인줄인식.
+ ex2//
+ const a () => {
+   return a;  //{}을 쓰면 암시적 성격이 없어져 return 써야함.
+ }
+
+</code></pre>
 <hr/>
 <h1>설명 기본틀- 라이브러리,프레임워크 설명</h1>
 
