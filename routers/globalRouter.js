@@ -1,3 +1,5 @@
+//globalRouter.js
+
 import express from "express";
 import routes from "../routes";
 import { home, search } from "../controller/videoController";

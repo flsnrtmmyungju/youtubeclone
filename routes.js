@@ -1,3 +1,5 @@
+//routes.js
+
 //Global
 const HOME = "/";
 const JOIN = "/join";

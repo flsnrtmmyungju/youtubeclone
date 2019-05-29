@@ -174,6 +174,38 @@ arrow function ex/
 </code></pre>
 
 <hr/>
+<h2>Pug</h2>
+
+- <h4>주소</h4>
+  - pug주소
+
+  https://pugjs.org/api/getting-started.html
+
+  - pug문법
+
+  https://jeong-pro.tistory.com/65
+
+- <h4>설명</h4>
+
+  express에서 View를 다루는 방식중 하나.<br>
+  express로 HTML을 보여줄수있음.<br>
+  res.send대신 실제 HTML전달.
+
+- <h4>설치</h4>
+
+<pre><code>
+ sudo npm i pug
+</code></pre>
+
+- <h4>사용법</h4>
+
+<pre><code>       
+** 파일명 **
+  
+ 
+</code></pre>
+
+<hr/>
 <h2>babel</h2>
 
 - <h4>npm 주소</h4>
@@ -282,6 +314,7 @@ arrow function ex/
 
 - <h4>설명</h4>
 
+  사용자가 웹사이트로 전달하는 정보들을 검사하는 미들웨어.<br>
   바디로부터 정보를 얻을수있게함(서버가 유저로부터 받은 데이터를 이해하는 방법).<br>
   누군가 form을 채워서 나에게 전송한다면(ex/아디 비번) 이form은 서버에 의해서 특정한 형태로 받아져야함<br>
   내가 그form(request object)에 접근하기위한미들웨어
@@ -320,7 +353,9 @@ arrow function ex/
 
 - <h4>설명</h4>
 
-  쿠키에 유저정보를 저장. 세션을 다루기위해(유저로부터 받은 쿠키를 이해하는 방법)
+  쿠키를 전달받아서 사용할수 있도록 만들어주는 미들웨어 (ex//사용자 인증)
+
+  쿠키에 세션을 다루기위해(유저로부터 받은 쿠키를 이해하는 방법) 유저정보를 저장.
 
 - <h4>설치</h4>
 
