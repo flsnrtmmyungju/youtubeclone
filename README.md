@@ -259,6 +259,36 @@ doctype html
 </code></pre>
 
 <hr/>
+
+<h2>Multer</h2>
+
+- <h4>주소</h4>
+
+  https://github.com/expressjs/multer/blob/master/doc/README-ko.md
+
+- <h4>설명</h4>
+
+  익스프레스 사용시 파일 업로드를 위해 사용되는 multipart/form-data 를 다루기 위한 node.js 의 미들웨어 입니다.<br>
+  효율성을 최대화 하기 위해 busboy 를 기반으로 하고 있습니다.<br>
+  Multer는 multipart (multipart/form-data)가 아닌 폼에서는 동작하지 않습니다.
+
+- <h4>설치</h4>
+
+<pre><code>
+ sudo npm i multer 
+</code></pre>
+
+- <h4>사용법</h4>
+
+ <pre><code>       
+ ** app.js **
+
+ const multer = require('multer')
+
+ 나머지는 사이트에 자세히..
+</code></pre>
+
+<hr/>
 <h2>babel</h2>
 
 - <h4>npm 주소</h4>
